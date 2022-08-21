@@ -52,7 +52,7 @@ public class UserRegistrationController {
 		model.addAttribute("user", new User());
 		return "registration";
 	}
-	
+
 	/*
 	@PostMapping
 	public String registerUserAccount(@Valid User validUser, BindingResult bindingResult, Model model, HttpServletRequest request,
@@ -89,7 +89,7 @@ public class UserRegistrationController {
 			@RequestParam("lastName") String lastName, @RequestParam("email") String email,
 			@RequestParam("password") String password, Model model, HttpServletRequest request,
 			final @RequestParam("image") MultipartFile file) {
-		
+
 		try {
 			// String uploadDirectory = System.getProperty("user.dir") + uploadFolder;
 			String uploadDirectory = request.getServletContext().getRealPath(uploadFolder);

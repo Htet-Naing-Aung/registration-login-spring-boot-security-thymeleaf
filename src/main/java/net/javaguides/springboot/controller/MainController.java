@@ -10,15 +10,15 @@ import net.javaguides.springboot.service.UserService;
 
 @Controller
 public class MainController {
-	
+
 	@Autowired
 	public UserService userService;
-	
-	@GetMapping("/login")
-	public String login() {
-		return "login";
-	}
-	
+
+//	@GetMapping("/login")
+//	public String login() {
+//		return "login";
+//	}
+
 	@GetMapping("/")
 	public String home(Model model) {
 		List<User> listUsers = userService.getAllUsers();
@@ -26,5 +26,5 @@ public class MainController {
 		return "index";
 		//return findPaginated(1, "firstName", "asc", model);
 	}
-	
+
 }
